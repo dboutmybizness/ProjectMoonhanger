@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Project MoonHanger</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="butt_new_idea">New Idea?</string>
+    <string name="title_activity_edit_idea">EditIdea</string>
+    <string name="label_name">Name</string>
+    <string name="placeholder_idea_title">What\'s the Title</string>
+    <string name="placeholder_idea_description">Tell me more about the ideas...</string>
+    <string name="label_save">Save</string>
+    <string name="title_activity_idea_landing">IdeaLanding</string>
+</resources>
