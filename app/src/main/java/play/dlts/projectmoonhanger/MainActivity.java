@@ -10,12 +10,15 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+
+import play.dlts.projectmoonhanger.models.Midea;
 
 
 public class MainActivity extends ActionBarActivity {
     private ListView mainlist;
     private ArrayAdapter<String> listA;
+    Midea midea = new Midea();
+    ArrayList<String> ideas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +31,24 @@ public class MainActivity extends ActionBarActivity {
                 "Jupiter", "Saturn", "Uranus", "Neptune"};
 
         ArrayList<String> planetList = new ArrayList<String>();
-        planetList.addAll( Arrays.asList(planets) );
+        //planetList.addAll( Arrays.asList(planets) );
 
         listA = new ArrayAdapter<String>(this, R.layout.ideas_list, planetList);
 
+        ideas = midea.getAllIdeas(this);
+        if ( ideas.size() > 0) {
+            for (int i = 0; i < ideas.size(); i++) {
+                listA.add(ideas.get(i));
+
+            }
+        }
+
+
         mainlist.setAdapter(listA);
+
+
+
+
     }
 
 
