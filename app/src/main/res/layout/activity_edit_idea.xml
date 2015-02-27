@@ -7,7 +7,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
+        android:id="@+id/etitle"
         android:editable="false"
         android:hint="@string/placeholder_idea_title"
         android:inputType="text" />
@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
-        android:id="@+id/editText2"
+        android:id="@+id/edescription"
         android:hint="@string/placeholder_idea_description" />
 
     <Button

@@ -55,4 +55,30 @@ public class Midea extends ModelBase {
         return getRowByID(ctx,id);
     }
 
+
+    public Boolean newIdea(Context ctx){
+        return super.createRow(ctx);
+    }
+
+    public int LastCreatedID(Context ctx){
+        Cursor c;
+        int lastID = 0;
+        DBAdapter db = new DBAdapter(ctx);
+        try{
+            db.open();
+            c = db.getLastRow(this.TABLE, this.FIELDS_LIST_ARRAY);
+            if (c.getCount() > 0) {
+                c.moveToFirst();
+                do {
+                    lastID = c.getInt(0);
+
+                } while (c.moveToNext());
+            }
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        return lastID;
+    }
 }

@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,14 +30,24 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setUpList();
-    }
-
-    public void setUpList(){
         mainlist = (ListView) findViewById(R.id.idea_list);
         listA = new ArrayAdapter<String>(this, R.layout.ideas_list, new ArrayList<String>());
 
 
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        setUpList();
+    }
+    public void setUpList(){
+
+
+
+        listA.clear();
+        idea_index_holder.clear();
 
         HashMap<Integer,String> map = midea.getIdeas(this);
         if (map.size() > 0){

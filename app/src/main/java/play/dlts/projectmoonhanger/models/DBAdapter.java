@@ -164,5 +164,10 @@ public class DBAdapter {
         return mCursor;
     }
 
+    protected Cursor getLastRow(String tablename, String[] getFields){
+        Cursor mCursor = db.query(true, tablename, getFields, null,null,null,null,"_id desc", "1");
+        return mCursor;
+    }
+
 
 }
