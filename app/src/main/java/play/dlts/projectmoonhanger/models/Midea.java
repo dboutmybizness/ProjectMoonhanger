@@ -51,4 +51,8 @@ public class Midea extends ModelBase {
         return map;
     }
 
+    public HashMap<String,String> getRow(Context ctx, Long id){
+        return getRowByID(ctx,id);
+    }
+
 }

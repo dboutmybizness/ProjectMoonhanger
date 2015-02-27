@@ -54,7 +54,10 @@ public class MainActivity extends ActionBarActivity {
         mainlist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(view.getContext(), "position-" + idea_index_holder.get(position), Toast.LENGTH_LONG).show();
+                //Toast.makeText(view.getContext(), "position-" + idea_index_holder.get(position), Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(MainActivity.this, IdeaLanding.class);
+            intent.putExtra("idea_id", (int) idea_index_holder.get(position) );
+            startActivity(intent);
             }
         });
     }

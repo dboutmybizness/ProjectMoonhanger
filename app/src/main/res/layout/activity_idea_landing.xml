@@ -8,6 +8,17 @@
 
     <TextView android:text="Idea Landing" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/abc_dropdownitem_icon_width" />
+        android:textSize="@dimen/abc_dropdownitem_icon_width"
+        android:id="@+id/ilanding_title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/ilanding_desc"
+        android:layout_below="@+id/ilanding_title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

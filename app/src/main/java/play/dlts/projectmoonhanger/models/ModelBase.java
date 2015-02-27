@@ -137,6 +137,29 @@ public class ModelBase implements ModelSetup, ModelTransactions{
 		db.close();
 		return c;
 	}
+
+    public HashMap<String,String> getRowByID(Context ctx, Long id){
+        Cursor c = null;
+        DBAdapter db = new DBAdapter(ctx);
+        HashMap<String,String> vals = new HashMap<String,String>();
+        try{
+            db.open();
+            c = db.getRow(this.TABLE, this.FIELDS_LIST_ARRAY, "_id=" + id);
+            if ( c.getCount() > 0){
+                c.moveToFirst();
+                do{
+                    for ( int i = 0; i < this.FIELD_NAMES.size(); i++){
+                        vals.put(this.FIELD_NAMES.get(i), c.getString(i));
+                    }
+                } while(c.moveToNext());
+            }
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        db.close();
+        return vals;
+    }
 	
 
 }
