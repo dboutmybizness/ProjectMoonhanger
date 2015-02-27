@@ -9,7 +9,7 @@ import java.util.HashMap;
 
 public class Midea extends ModelBase {
 
-	static final String TABLE = "profile";
+	static final String TABLE = "ideas";
 	static final String[] FIELDS_ARRAY = {
 		"_id:0",
 		"title:2",
