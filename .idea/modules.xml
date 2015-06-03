@@ -3,8 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ProjectMoonhanger.iml" filepath="$PROJECT_DIR$/ProjectMoonhanger.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file:///media/data/Dev/SandBox/ProjectMoonhanger/app/app.iml" filepath="/media/data/Dev/SandBox/ProjectMoonhanger/app/app.iml" />
     </modules>
   </component>
 </project>
-
